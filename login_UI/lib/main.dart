@@ -20,10 +20,14 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image(
-                    width: 80,
-                    height: 80,
-                    image: AssetImage('assets/login_logo.png'),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image(
+                      width: 80,
+                      height: 80,
+                      image: AssetImage('assets/login_logo.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   SizedBox(width: 15),
 
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 40),
               Center(
                 child: Text(
                   'Login',
@@ -107,7 +111,7 @@ class MyApp extends StatelessWidget {
                     fillColor: Colors.black12,
                     filled: true,
                     prefixIcon: Icon(Icons.password, color: Colors.black),
-                    suffix: Icon(Icons.visibility_off_outlined),
+                    suffixIcon: Icon(Icons.visibility_off_outlined),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(10),
@@ -140,6 +144,12 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.black87,
                   borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 5,
+                      spreadRadius: 2,
+                    ),
+                  ],
                 ),
                 height: 60,
                 width: 300,
@@ -155,7 +165,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
