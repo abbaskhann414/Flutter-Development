@@ -32,7 +32,8 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
         ),
-        body: Padding(
+        body:
+        Padding(
           padding: EdgeInsets.only(top: 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
